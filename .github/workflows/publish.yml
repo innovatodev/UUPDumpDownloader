@@ -10,7 +10,6 @@ jobs:
       - name: publish
         env:
             PSGALLERY_KEY: ${{ secrets.PSGALLERY_KEY }}
-        shell: pwsh
+        shell: powershell
         run: |
-          Import-Module .\Module\UUPDumpDownloader.psd1
-          Publish-Module -Name UUPDumpDownloader -NuGetApiKey $env:PSGALLERY_KEY -Verbose
+          Publish.ps1
