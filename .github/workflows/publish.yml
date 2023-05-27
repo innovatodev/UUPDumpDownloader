@@ -19,4 +19,5 @@ jobs:
           LicenseUri  = "https://raw.githubusercontent.com/innovatodev/UUPDumpDownloader/main/LICENSE"
           Tag         = 'Windows', 'ISO', 'UUP'
           ReleaseNote = 'https://raw.githubusercontent.com/innovatodev/UUPDumpDownloader/main/CHANGELOG.md'
+          }
           Publish-Module @parameters
