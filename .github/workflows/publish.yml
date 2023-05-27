@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: publish
         env:
-          NUGET_KEY: ${{ secrets.PSGALLERY_KEY }}
+            PSGALLERY_KEY: ${{ secrets.PSGALLERY_KEY }}
         shell: pwsh
         run: |
           Publish-Module -Path /Module -NuGetApiKey $env:PSGALLERY_KEY -Verbose
