@@ -1,0 +1,15 @@
+name: publish
+on:
+  workflow_dispatch:
+permissions: read-all
+jobs:
+  build:
+    name: publish
+    runs-on: windows-latest
+    steps:
+        - name: PSGallery
+          uses: natescherer/update-powershell-metadata-action@v1
+          with:
+            token: ${{ secrets.PSGALLERY_KEY }}
+            target: gallery
+            path: Module
