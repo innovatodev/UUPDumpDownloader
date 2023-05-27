@@ -12,4 +12,4 @@ jobs:
             PSGALLERY_KEY: ${{ secrets.PSGALLERY_KEY }}
         shell: pwsh
         run: |
-          Publish-Module -Path ./Module -NuGetApiKey $env:PSGALLERY_KEY -Verbose
+          Publish-Module -Path ./Module/UUPDumpDownloader.psd1 -NuGetApiKey $env:PSGALLERY_KEY -Verbose
