@@ -12,4 +12,4 @@ jobs:
             PSGALLERY_KEY: ${{ secrets.PSGALLERY_KEY }}
         shell: powershell
         run: |
-          Publish.ps1
+          .\Publish.ps1
