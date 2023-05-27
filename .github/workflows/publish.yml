@@ -1,14 +1,17 @@
 name: publish
+
 on:
-  workflow_dispatch:
-permissions: read-all
+  release:
+    types: [created]
+
 jobs:
-  build:
-    name: publish
+   publish:
     runs-on: ubuntu-latest
     steps:
-        - name: Publish Module to PowerShell Gallery
-          uses: pcgeek86/publish-powershell-module-action@v20
-          id: publish-module
-          with:
-           NuGetApiKey: ${{ secrets.PS_GALLERY_KEY }}
+      - uses: actions/checkout@v3
+      - name: publish
+        env:
+          NUGET_KEY: ${{ secrets.PSGALLERY_KEY }}
+        shell: pwsh
+        run: |
+          Publish-Module -Path /Module -NuGetApiKey $env:PSGALLERY_KEY -Verbose
