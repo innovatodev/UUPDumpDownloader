@@ -2,9 +2,13 @@
 
 Script to download any version of Windows on https://uupdump.net/
 
-Needs Administratives Rights.
+## Install it
 
 `Install-Module -Name UUPDumpDownloader`
+
+Get-UUPDumpMedia needs administratives rights.
+
+## Examples
 
 Download latest retail Windows 10, all editions, english :
 
@@ -26,7 +30,7 @@ Check latest Windows 11 retail build :
 
 `Get-UUPDumpLatest -OS 11`
 
-```powershell
+```markdown
 Searching UUPDump for Windows 11
 ID = 5aa4a1a2-8bd2-4b8b-b463-523d7c944ca3
 Number = 22621.1778
@@ -36,5 +40,3 @@ Name                           Value
 Number                         22621.1778
 ID                             5aa4a1a2-8bd2-4b8b-b463-523d7c944ca3
 ```
-
-Return an hashtable.
