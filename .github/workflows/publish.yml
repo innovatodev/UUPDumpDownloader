@@ -7,9 +7,8 @@ jobs:
     name: publish
     runs-on: windows-latest
     steps:
-        - name: Publish PowerShell
-          uses: natescherer/publish-powershell-action@v1.0.3
+        - name: Publish Module to PowerShell Gallery
+          uses: pcgeek86/publish-powershell-module-action@v20
+          id: publish-module
           with:
-            token: ${{ secrets.PSGALLERY_KEY }}
-            target: gallery
-            path: UUPDumpDownloader
+           NuGetApiKey: ${{ secrets.PS_GALLERY_KEY }}
