@@ -14,7 +14,7 @@ jobs:
         run: |
           Publish-Module -Path .\Module -NuGetApiKey $env:PSGALLERY_KEY -Verbose
           $parameters = @{
-          Name        = "UUPDumpDownloader"
+          Path        = .\Module
           NuGetApiKey = $PSGALLERY_KEY
           LicenseUri  = "https://raw.githubusercontent.com/innovatodev/UUPDumpDownloader/main/LICENSE"
           Tag         = 'Windows', 'ISO', 'UUP'
