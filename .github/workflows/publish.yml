@@ -13,11 +13,3 @@ jobs:
         shell: pwsh
         run: |
           Publish-Module -Path .\Module -NuGetApiKey $env:PSGALLERY_KEY -Verbose
-          $parameters = @{
-          Path        = .\Module
-          NuGetApiKey = $PSGALLERY_KEY
-          LicenseUri  = "https://raw.githubusercontent.com/innovatodev/UUPDumpDownloader/main/LICENSE"
-          Tag         = 'Windows', 'ISO', 'UUP'
-          ReleaseNote = 'https://raw.githubusercontent.com/innovatodev/UUPDumpDownloader/main/CHANGELOG.md'
-          }
-          Publish-Module @parameters
